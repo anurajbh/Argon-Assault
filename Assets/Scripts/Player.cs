@@ -37,6 +37,10 @@ public class Player : MonoBehaviour
         transform.localPosition = new Vector3(xPos, yPos, transform.localPosition.z);
         ProcessRotation();
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        print("Player hit something");
+    }
 
     private void ProcessRotation()
     {

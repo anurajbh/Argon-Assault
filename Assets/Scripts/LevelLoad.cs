@@ -9,6 +9,7 @@ public class LevelLoad : MonoBehaviour
 
     Scene scene;
     int sceneIndex;
+    [SerializeField] AudioSource aud;
 	// Use this for initialization
 	void Start ()
     {
@@ -22,6 +23,7 @@ public class LevelLoad : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 		if(Input.GetKeyDown(KeyCode.Return))
         {
+            aud.Stop();
             LoadTheNextLevel(sceneIndex);
         }
 	}
