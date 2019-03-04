@@ -4,42 +4,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour
+public class PlayerBehaviour : MonoBehaviour
 {
+    [Header("Speed parameters")]
     [Tooltip("In ms^-1")][SerializeField] float xSpeed = 100f;
     [Tooltip("In ms^-1")] [SerializeField] float ySpeed = 100f;
 
     //Range parameters
+    [Header("Range parameters")]
     [SerializeField] float xRange = 200f;
     [SerializeField] float yRange = 150f;
     float xThrow;
     float yThrow;
+    bool dead = false;
 
-    //Rotation parameters
+    //position parameters
+    [Header("Position parameters")]
     [SerializeField] float positionPitchFactor = -5f;
-    [SerializeField] float controlPitchFactor = -20f;
     [SerializeField] float positionYawFactor = 5f;
+
+    [Header("Control Throw parameters")]
+    [SerializeField] float controlPitchFactor = -20f;
     [SerializeField] float controlRollFactor = -20f;
 
     
 
     // Use this for initialization
-    void Start ()
-    {
-		
-	}
-	
 	// Update is called once per frame
 	void Update ()
     {
-        float xPos = MoveTheShipX();
-        float yPos = MoveTheShipY();
-        transform.localPosition = new Vector3(xPos, yPos, transform.localPosition.z);
-        ProcessRotation();
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        print("Player hit something");
+        if(!dead)
+        {
+            float xPos = MoveTheShipX();
+            float yPos = MoveTheShipY();
+            transform.localPosition = new Vector3(xPos, yPos, transform.localPosition.z);
+            ProcessRotation();
+        }
     }
 
     private void ProcessRotation()
@@ -68,5 +68,9 @@ public class Player : MonoBehaviour
         float rawYPos = transform.localPosition.y + yOffsetThisFrame;
         float yPos = Mathf.Clamp(rawYPos, -yRange, +yRange);
         return yPos;
+    }
+    private void KillPlayer()//called by message from CollisionHandler
+    {
+        dead = true;
     }
 }
