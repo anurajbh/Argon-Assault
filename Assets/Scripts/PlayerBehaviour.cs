@@ -9,7 +9,7 @@ public class PlayerBehaviour : MonoBehaviour
     [Header("Speed parameters")]
     [Tooltip("In ms^-1")][SerializeField] float xSpeed = 100f;
     [Tooltip("In ms^-1")] [SerializeField] float ySpeed = 100f;
-
+    [SerializeField] GameObject[] guns;
     //Range parameters
     [Header("Range parameters")]
     [SerializeField] float xRange = 200f;
@@ -35,10 +35,44 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if(!dead)
         {
-            float xPos = MoveTheShipX();
-            float yPos = MoveTheShipY();
-            transform.localPosition = new Vector3(xPos, yPos, transform.localPosition.z);
-            ProcessRotation();
+            ProcessShipControl();
+        }
+    }
+
+    private void ProcessShipControl()
+    {
+        float xPos = MoveTheShipX();
+        float yPos = MoveTheShipY();
+        transform.localPosition = new Vector3(xPos, yPos, transform.localPosition.z);
+        ProcessRotation();
+        ProcessFiring();
+    }
+
+    void ProcessFiring()
+    {
+        if(CrossPlatformInputManager.GetButton("Fire"))
+        {
+            ActivateGuns();
+        }
+        else
+        {
+            DeactivateGuns();
+        }
+    }
+
+    void DeactivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(false);
+        }
+    }
+
+    void ActivateGuns()
+    {
+        foreach(GameObject gun in guns)
+        {
+            gun.SetActive(true);
         }
     }
 
