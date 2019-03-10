@@ -133,6 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathfx: {fileID: 4222241127602730091, guid: 709392d82d981cf40abc84bdbd1d5358, type: 3}
   parent: {fileID: 276531942}
+  pointsPerHit: 12
 --- !u!1 &90301083
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,6 +310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathfx: {fileID: 4222241127602730091, guid: 709392d82d981cf40abc84bdbd1d5358, type: 3}
   parent: {fileID: 276531942}
+  pointsPerHit: 10
 --- !u!1 &276531941
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathfx: {fileID: 4222241127602730091, guid: 709392d82d981cf40abc84bdbd1d5358, type: 3}
   parent: {fileID: 276531942}
+  pointsPerHit: 12
 --- !u!1001 &405022172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1146,6 +1149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathfx: {fileID: 4222241127602730091, guid: 709392d82d981cf40abc84bdbd1d5358, type: 3}
   parent: {fileID: 276531942}
+  pointsPerHit: 10
 --- !u!1001 &1089375221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1499,6 +1503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathfx: {fileID: 4222241127602730091, guid: 709392d82d981cf40abc84bdbd1d5358, type: 3}
   parent: {fileID: 276531942}
+  pointsPerHit: 10
 --- !u!1 &1375447866 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1238095480485456, guid: bf374732b0ea2c34daa340dc2de7f746,
@@ -1519,6 +1524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathfx: {fileID: 4222241127602730091, guid: 709392d82d981cf40abc84bdbd1d5358, type: 3}
   parent: {fileID: 276531942}
+  pointsPerHit: 12
 --- !u!1 &1693126205
 GameObject:
   m_ObjectHideFlags: 0
@@ -1567,10 +1573,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1744,6 +1750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathfx: {fileID: 4222241127602730091, guid: 709392d82d981cf40abc84bdbd1d5358, type: 3}
   parent: {fileID: 276531942}
+  pointsPerHit: 12
 --- !u!1 &1995365044
 GameObject:
   m_ObjectHideFlags: 0
@@ -1794,6 +1801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathfx: {fileID: 4222241127602730091, guid: 709392d82d981cf40abc84bdbd1d5358, type: 3}
   parent: {fileID: 276531942}
+  pointsPerHit: 10
 --- !u!1 &2106618641
 GameObject:
   m_ObjectHideFlags: 0

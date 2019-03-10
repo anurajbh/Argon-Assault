@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ScoreBoard : MonoBehaviour
 {
-    [SerializeField] int pointsPerHit = 10;
     int score = 0;
     Text scoreText;
     // Start is called before the first frame update
@@ -16,7 +15,7 @@ public class ScoreBoard : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void ScoreHit()
+    public void ScoreHit(int pointsPerHit)
     {
         score += pointsPerHit;
         scoreText.text = score.ToString();
