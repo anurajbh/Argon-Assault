@@ -14,8 +14,8 @@ public class PlayerBehaviour : MonoBehaviour
     [Header("Range parameters")]
     [SerializeField] float xRange = 200f;
     [SerializeField] float yRange = 150f;
-    float xThrow;
-    float yThrow;
+    float xThrow = 0f;
+    float yThrow = 0f;
     bool dead = false;
 
     //position parameters
