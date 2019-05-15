@@ -38,6 +38,10 @@ public class PlayerBehaviour : MonoBehaviour
         {
             ProcessShipControl();
         }
+        if (CrossPlatformInputManager.GetButton("Cancel"))
+        {
+            Application.Quit();
+        }
     }
 
     private void ProcessShipControl()

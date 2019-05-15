@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class LevelLoad : MonoBehaviour
 {
@@ -19,11 +20,15 @@ public class LevelLoad : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-		if(Input.GetKeyDown(KeyCode.Return))
+		if(CrossPlatformInputManager.GetButton("Submit"))
         {
             LoadTheNextLevel(sceneIndex);
         }
-	}
+        if (CrossPlatformInputManager.GetButton("Cancel"))
+        {
+            Application.Quit();
+        }
+    }
 
     private void LoadTheNextLevel(int sceneIndex)
     {

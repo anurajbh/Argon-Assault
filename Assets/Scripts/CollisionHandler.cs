@@ -12,7 +12,10 @@ public class CollisionHandler : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         print(other.name);
-        InitializeDeathSequence();
+        bool victory = other.tag.Equals("Victory");
+        print(victory);
+        if(!victory)
+            InitializeDeathSequence();
     }
 
     private void InitializeDeathSequence()

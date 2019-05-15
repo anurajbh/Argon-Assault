@@ -387,6 +387,11 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 2e25bf25512c1394e892909fd05341a1, type: 3}
+    - target: {fileID: 1221548664157872310, guid: 0e64ad73ad8a0de45856fd32418b7dd4,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e64ad73ad8a0de45856fd32418b7dd4, type: 3}
 --- !u!1 &1345197791
@@ -423,8 +428,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60, y: 0}
-  m_SizeDelta: {x: 567.4, y: 184.4}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 600, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1345197793
 MonoBehaviour:
@@ -459,10 +464,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Argon Assault
+  m_Text: 'Welcome to Argon Assault
 
 
-    Click Enter to start game'
+    Press Enter/Return to Start
+
+    Press Escape to exit'
 --- !u!222 &1345197794
 CanvasRenderer:
   m_ObjectHideFlags: 0
