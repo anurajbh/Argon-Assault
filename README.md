@@ -1,6 +1,6 @@
 # Argon-Assault
-Welcome to Argon Assault, a game created for the Udemy course, "The Complete C# Unity Developer 3D(by Ben Tristem and Rick Davidson, GameDev.tv)". 
 
-Argon Assault is an on-rails shooter, set in space. The player has to control their ship whilst traversing a mine on an astroid. The mine is being looted by pirates, and the player gains points by stopping their ships.
 
-The project is currently nearing completion.
+Welcome to Argon Assault, a 3D On Rails Shooter prototype created in Unity. This prototype was created for the Udemy Course "The Complete C# Unity Developer 3D" (Ben Tristem and Rick Davidson, Gamedev.tv).
+
+The player pilots a spaceship through a mine located on an asteroid. The asterioid is currently being raided by pirates, and the player can gain points by shooting at the pirates. 
